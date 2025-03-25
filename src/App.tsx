@@ -4,6 +4,7 @@ import WeatherDashboard from "./pages/WeatherDashboard";
 import CityPage from "./pages/CityPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Layout from "./components/Layout";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ function App() {
           </Layout>
         </ThemeProvider>
       </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
